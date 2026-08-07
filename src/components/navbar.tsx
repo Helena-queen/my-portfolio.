@@ -1,27 +1,50 @@
-import { SunMedium } from 'lucide-react'
-import React from 'react'
+import { SunMedium } from "lucide-react";
 
-function Navbar():React.ReactElement {
+function Navbar() {
   return (
-<nav className='flex items-center gap-92 px-20 p-4 text-white'>
-<h1 className="text-2xl font-bold bg-linear-to-r from-orange-300 via-orange-500 to-orange-700 bg-clip-text text-transparent">
-  Helen Opute
-</h1>
-<div className='flex '>
-  <ul className='flex gap-6'>
-    <li><a href="#home" className='hover:text-orange-500 text-gray-400 text-lg'>About</a></li>
-    <li><a href="#about" className='hover:text-orange-500 text-gray-400 text-lg'>Experience</a></li>
-    <li><a href="#projects" className='hover:text-orange-500 text-gray-400 text-lg'>Projects</a></li>
-    <li><a href="#contact" className='hover:text-orange-500 text-gray-400 text-lg'>Skills</a></li>
-    <li><a href="#contact" className='hover:text-orange-500 text-gray-400 text-lg'>Contact</a></li>
-  </ul>
-</div>
-<div>
-  <SunMedium size={20} className='cursor-pointer hover:bg-gray-700 '/>
-</div>
+    <nav className=" sticky top-0 z-50 bg-[#050b14]/80 backdrop-blur-md border-b border-zinc-800 flex items-center justify-between px-20 py-5 text-white">
+      <h1 className="text-2xl font-bold bg-linear-to-r from-orange-300 via-orange-500 to-orange-700 bg-clip-text text-transparent">
+        Helen Opute
+      </h1>
 
-</nav>
-)
+      <ul className="flex gap-8 pr-28">
+        <li>
+          <a href="#about" className="text-lg text-gray-400 hover:text-white">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a href="#experience" className="text-lg text-gray-400 hover:text-white">
+            Experience
+          </a>
+        </li>
+
+        <li>
+          <a href="#projects" className="text-lg text-gray-400 hover:text-white">
+            Projects
+          </a>
+        </li>
+
+        <li>
+          <a href="#skills" className="text-lg text-gray-400 hover:text-white">
+            Skills
+          </a>
+        </li>
+
+        <li>
+          <a href="#contact" className="text-lg text-gray-400 hover:text-white">
+            Contact
+          </a>
+        </li>
+      </ul>
+
+      <SunMedium
+        size={20}
+        className="cursor-pointer  hover:bg-gray-700"
+      />
+    </nav>
+  );
 }
 
-export default Navbar
+export default Navbar;

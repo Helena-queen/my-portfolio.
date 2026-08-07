@@ -20,6 +20,9 @@ importers:
       react-dom:
         specifier: ^19.2.5
         version: 19.2.5(react@19.2.5)
+      react-icons:
+        specifier: ^5.7.0
+        version: 5.7.0(react@19.2.5)
       react-router:
         specifier: ^7.15.0
         version: 7.15.0(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
@@ -913,6 +916,11 @@ packages:
     resolution: {integrity: sha512-J5bAZz+DXMMwW/wV3xzKke59Af6CHY7G4uYLN1OvBcKEsWOs4pQExj86BBKamxl/Ik5bx9whOrvBlSDfWzgSag==}
     peerDependencies:
       react: ^19.2.5
+
+  react-icons@5.7.0:
+    resolution: {integrity: sha512-LBLy340Rzqy6+/yVhZKT3B/QpP1BZaesGqasf09HPOBzRarcDIFH0WwXlXQfE7q7ipxK4MSiC5DIBWURCny6fw==}
+    peerDependencies:
+      react: '*'
 
   react-router@7.15.0:
     resolution: {integrity: sha512-HW9vYwuM8f4yx66Izy8xfrzCM+SBJluoZcCbww9A1TySax11S5Vgw6fi3ZjMONw9J4gQwngL7PzkyIpJJpJ7RQ==}
@@ -1853,6 +1861,10 @@ snapshots:
     dependencies:
       react: 19.2.5
       scheduler: 0.27.0
+
+  react-icons@5.7.0(react@19.2.5):
+    dependencies:
+      react: 19.2.5
 
   react-router@7.15.0(react-dom@19.2.5(react@19.2.5))(react@19.2.5):
     dependencies:

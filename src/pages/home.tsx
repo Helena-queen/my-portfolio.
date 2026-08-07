@@ -8,7 +8,7 @@ function Home() {
       <BackgroundDecoration />
 
       <section className="relative z-10 flex min-h-screen items-center justify-center">
-        <div className="max-w-3xl text-center mb-44">
+        <div className="max-w-3xl text-center mb-14 ">
           <div className="relative mx-auto h-52 w-52 ">
             {/* Glow */}
             <div className="absolute inset-0 rounded-full bg-orange-500/20 blur-3xl"></div>
@@ -36,17 +36,23 @@ function Home() {
           </p>
 
           <div className="mt-10 flex justify-center gap-4">
-            <button className="rounded-xl bg-linear-to-r from-orange-500 to-orange-600 px-8 py-3 font-semibold text-white shadow-lg shadow-orange-500/30 transition-all duration-300 hover:scale-105 hover:shadow-orange-500/50 flex items-center">
-            <Download size={20} className="mr-3 inline-block" />
-              Download CV
-            </button>
+            <button
+  className="group relative overflow-hidden rounded-xl px-8 py-3 font-semibold text-white"
+>
+  <span className="absolute inset-0 bg-gradient-to-r from-orange-600 via-orange-500 to-orange-700 bg-[length:200%_100%] transition-all duration-700 group-hover:bg-[position:100%_0]" />
+
+  <span className="relative flex items-center">
+    <Download size={20} className="mr-3" />
+    Download CV
+  </span>
+</button>
             <button className="rounded-xl border border-zinc-700 bg-zinc-900/60 px-8 py-3 font-semibold text-white transition-all duration-300 hover:border-orange-500 hover:bg-zinc-800 flex items-center">
             <Mail size={20} className="mr-3 inline-block" />
               Contact Me
             </button>
           </div>
 
-          <div><ArrowDown size={24} className="mx-auto mt-12 animate-bounce" /></div>
+          <div><ArrowDown size={24} className="mx-auto mt-8 animate-bounce" /></div>
         </div>
       </section>
     </main>
