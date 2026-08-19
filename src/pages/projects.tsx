@@ -129,7 +129,7 @@ function Projects(): React.ReactElement {
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="rounded-full border border-orange-500/20 bg-orange-500/10 px-4 py-2 text-sm text-orange-300"
+                    className="rounded-full bg-[#262626] px-4 py-2 text-sm text-white"
                   >
                     {tech}
                   </span>
@@ -143,7 +143,7 @@ function Projects(): React.ReactElement {
                 <a
                   href={project.github}
                   target="_blank"
-                  className="flex items-center gap-2 rounded-xl border border-orange-500 px-6 py-3 transition hover:bg-orange-500 hover:text-white"
+                  className="flex items-center gap-2 rounded-xl border border-white px-6 py-3 transition hover:bg-orange-500/10 hover:text-white hover:border-orange-500"
                 >
                   <FaGithub size={18} />
                   GitHub

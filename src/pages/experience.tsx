@@ -138,7 +138,7 @@ function Experience() {
                   <div className="flex items-center gap-2 md:justify-end">
                     <CalendarDays
                       size={17}
-                      className="text-orange-400"
+                      className="text-[#47bf65]"
                     />
 
                     {exp.duration}
@@ -147,7 +147,7 @@ function Experience() {
                   <div className="flex items-center gap-2 md:justify-end">
                     <MapPin
                       size={17}
-                      className="text-orange-400"
+                      className="text-[#47bf65]"
                     />
 
                     {exp.location}
@@ -174,7 +174,7 @@ function Experience() {
                   >
                     <CheckCircle2
                       size={18}
-                      className="mt-1 text-orange-400 flex-shrink-0"
+                      className="mt-1 text-[#47bf65] flex-shrink-0"
                     />
 
                     <span>{item}</span>
