@@ -10,7 +10,7 @@ import {
 const projects = [
   {
     title: "School Management System",
-    image: "/projects/esma.png", // Replace later
+    image: "/projects/esma.png",
     description:
       "A multi-tenant school management platform that streamlines student enrollment, staff management, fee management, academic records, and administrative operations.",
 
@@ -67,37 +67,48 @@ function Projects(): React.ReactElement {
   return (
     <section
       id="projects"
-      className="mx-auto max-w-7xl px-6 py-5 text-white"
+      className="mx-auto max-w-7xl px-6 py-5 text-zinc-900 dark:text-white"
     >
-      {/* Heading */}
-
       <div className="mb-16 text-center">
-        <h2 className="bg-gradient-to-r from-orange-300 via-orange-500 to-orange-600 bg-clip-text text-4xl font-bold text-transparent">
+        <h2 className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-4xl font-bold text-transparent">
           Featured Projects
         </h2>
 
         <div className="mx-auto mt-4 h-1 w-28 rounded-full bg-gradient-to-r from-orange-400 to-orange-600" />
 
-        <p className="mx-auto mt-8 max-w-3xl text-lg text-zinc-400">
+        <p className="mx-auto mt-8 max-w-3xl text-lg text-zinc-500 dark:text-zinc-400">
           A selection of projects that demonstrate my experience in
           software development, system architecture, API integration,
           and building scalable applications.
         </p>
       </div>
 
-      {/* Projects */}
-
       <div className="space-y-12">
         {projects.map((project, index) => (
           <div
             key={project.title}
             className={`grid items-center gap-10 lg:grid-cols-2 ${
-              index % 2 !== 0 ? "lg:[&>*:first-child]:order-2" : ""
+              index % 2 !== 0
+                ? "lg:[&>*:first-child]:order-2"
+                : ""
             }`}
           >
-            {/* Screenshot */}
-
-            <div className="overflow-hidden rounded-3xl border border-zinc-800 bg-[#0B111D] transition-all duration-300 hover:border-orange-500/40 hover:shadow-xl hover:shadow-orange-500/10">
+            <div
+              className="
+                overflow-hidden
+                rounded-3xl
+                border border-zinc-200
+                bg-white
+                shadow-sm
+                transition-all duration-300
+                hover:border-orange-500/40
+                hover:shadow-xl
+                hover:shadow-orange-500/10
+                dark:border-zinc-800
+                dark:bg-[#0B111D]
+                dark:shadow-none
+              "
+            >
               <img
                 src={project.image}
                 alt={project.title}
@@ -105,11 +116,8 @@ function Projects(): React.ReactElement {
               />
             </div>
 
-            {/* Details */}
-
             <div>
-
-              <p className="mb-3 text-orange-400 font-semibold">
+              <p className="mb-3 font-semibold text-orange-500 dark:text-orange-400">
                 Featured Project
               </p>
 
@@ -117,33 +125,57 @@ function Projects(): React.ReactElement {
                 {project.title}
               </h3>
 
-              <div className="rounded-2xl border border-zinc-800 bg-[#0B111D]/70 p-6">
-                <p className="leading-8 text-zinc-300">
+              <div
+                className="
+                  rounded-2xl
+                  border border-zinc-200
+                  bg-zinc-50
+                  p-6
+                  dark:border-zinc-800
+                  dark:bg-[#0B111D]/70
+                "
+              >
+                <p className="leading-8 text-zinc-600 dark:text-zinc-300">
                   {project.description}
                 </p>
               </div>
-
-              {/* Tech Stack */}
 
               <div className="mt-8 flex flex-wrap gap-3">
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="rounded-full bg-[#262626] px-4 py-2 text-sm text-white"
+                    className="
+                      rounded-full
+                      bg-zinc-100
+                      px-4 py-2
+                      text-sm
+                      text-zinc-700
+                      dark:bg-[#262626]
+                      dark:text-white
+                    "
                   >
                     {tech}
                   </span>
                 ))}
               </div>
 
-              {/* Buttons */}
-
               <div className="mt-10 flex gap-5">
-
                 <a
                   href={project.github}
                   target="_blank"
-                  className="flex items-center gap-2 rounded-xl border border-white px-6 py-3 transition hover:bg-orange-500/10 hover:text-white hover:border-orange-500"
+                  rel="noopener noreferrer"
+                  className="
+                    flex items-center gap-2
+                    rounded-xl
+                    border border-zinc-300
+                    px-6 py-3
+                    transition
+                    hover:border-orange-500
+                    hover:bg-orange-500/10
+                    hover:text-orange-600
+                    dark:border-white
+                    dark:hover:text-white
+                  "
                 >
                   <FaGithub size={18} />
                   GitHub
@@ -152,16 +184,24 @@ function Projects(): React.ReactElement {
                 <a
                   href={project.demo}
                   target="_blank"
-                  className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 px-6 py-3 font-semibold transition hover:scale-105"
+                  rel="noopener noreferrer"
+                  className="
+                    flex items-center gap-2
+                    rounded-xl
+                    bg-gradient-to-r
+                    from-orange-500 to-orange-600
+                    px-6 py-3
+                    font-semibold
+                    text-white
+                    transition
+                    hover:scale-105
+                  "
                 >
                   Live Demo
                   <ArrowUpRight size={18} />
                 </a>
-
               </div>
-
             </div>
-
           </div>
         ))}
       </div>

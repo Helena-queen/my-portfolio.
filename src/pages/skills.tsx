@@ -13,7 +13,6 @@ const frontend = [
   "TypeScript",
   "JavaScript",
   "Tailwind CSS",
-  
 ];
 
 const backend = [
@@ -76,11 +75,10 @@ function Skills(): React.ReactElement {
   return (
     <section
       id="skills"
-      className="max-w-7xl mx-auto px-6 py-22 text-white"
+      className="mx-auto max-w-7xl px-6 py-22 text-zinc-900 dark:text-white"
     >
-      {/* Heading */}
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold bg-gradient-to-r from-orange-300 via-orange-500 to-orange-600 bg-clip-text text-transparent">
+      <div className="mb-16 text-center">
+        <h2 className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-4xl font-bold text-transparent">
           Skills & Expertise
         </h2>
 
@@ -89,60 +87,61 @@ function Skills(): React.ReactElement {
 
       {/* Skill Cards */}
       <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-
-        {/* Frontend */}
         <SkillCard
-          icon={<Code2 size={28} className="text-orange-400" />}
+          icon={<Code2 size={28} className="text-orange-500 dark:text-orange-400" />}
           title="Frontend Development"
           skills={frontend}
         />
 
-        {/* Backend */}
         <SkillCard
-          icon={<Database size={28} className="text-blue-400" />}
+          icon={<Database size={28} className="text-blue-500 dark:text-blue-400" />}
           title="Backend Development"
           skills={backend}
         />
 
-        {/* Tools */}
         <SkillCard
-          icon={<Wrench size={28} className="text-green-400" />}
+          icon={<Wrench size={28} className="text-green-500 dark:text-green-400" />}
           title="Tools & Workflow"
           skills={tools}
         />
 
-        {/* QA */}
         <SkillCard
-          icon={<ShieldCheck size={28} className="text-purple-400" />}
+          icon={<ShieldCheck size={28} className="text-purple-500 dark:text-purple-400" />}
           title="Testing & Quality Assurance"
           skills={qa}
         />
 
-        {/* Project Management */}
         <SkillCard
-          icon={<BriefcaseBusiness size={28} className="text-red-400" />}
+          icon={<BriefcaseBusiness size={28} className="text-red-500 dark:text-red-400" />}
           title="Project Management"
           skills={management}
         />
-
       </div>
 
       {/* Professional Strengths */}
-      <div className="mt-16 rounded-3xl border border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-orange-600/10 p-10">
+      <div
+        className="
+          mt-16
+          rounded-3xl
+          border border-orange-500/20
+          bg-gradient-to-r from-orange-500/10 to-orange-600/10
+          p-10
+        "
+      >
         <h3 className="mb-8 text-center text-2xl font-semibold">
           Professional Strengths
         </h3>
 
         <div className="flex flex-wrap justify-center gap-4">
-  {strengths.map((strength) => (
-    <span
-      key={strength.name}
-      className={`${strength.color} rounded-full px-3 py-1.5 font-medium text-white transition-transform duration-300 hover:scale-105`}
-    >
-      {strength.name}
-    </span>
-  ))}
-</div>
+          {strengths.map((strength) => (
+            <span
+              key={strength.name}
+              className={`${strength.color} rounded-full px-3 py-1.5 font-medium text-white transition-transform duration-300 hover:scale-105`}
+            >
+              {strength.name}
+            </span>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -160,17 +159,48 @@ function SkillCard({
   skills,
 }: SkillCardProps): React.ReactElement {
   return (
-    <div className="rounded-3xl border border-zinc-800 bg-[#0b111d]/70 p-8 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-orange-500/40 hover:shadow-xl hover:shadow-orange-500/10">
+    <div
+      className="
+        rounded-3xl
+        border border-zinc-200
+        bg-white/80
+        p-8
+        shadow-sm
+        backdrop-blur-xl
+        transition-all duration-300
+        hover:-translate-y-2
+        hover:border-orange-500/40
+        hover:shadow-xl
+        hover:shadow-orange-500/10
+        dark:border-zinc-800
+        dark:bg-[#0b111d]/70
+        dark:shadow-none
+      "
+    >
       <div className="mb-8 flex items-center gap-3">
         {icon}
-        <h3 className="text-xl font-semibold">{title}</h3>
+
+        <h3 className="text-xl font-semibold">
+          {title}
+        </h3>
       </div>
 
       <div className="flex flex-wrap gap-3">
         {skills.map((skill) => (
           <span
             key={skill}
-            className="rounded-full bg-[#262626] px-4 py-2 text-sm text-white transition-all duration-300  hover:text-white"
+            className="
+              rounded-full
+              bg-zinc-100
+              px-4 py-2
+              text-sm
+              text-zinc-700
+              transition-all duration-300
+              hover:text-zinc-900
+              dark:bg-[#262626]
+              dark:text-white
+              dark:hover:text-white
+            "
           >
             {skill}
           </span>
