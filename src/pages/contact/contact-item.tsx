@@ -14,15 +14,36 @@ function ContactItem({
   bgColor,
 }: ContactItemProps): React.ReactElement {
   return (
-    <div className="flex items-center gap-5">
-      <div className={`rounded-xl ${bgColor} p-4`}>
+    <div className="flex min-w-0 items-center gap-4 sm:gap-5">
+      <div
+        className={`
+          flex
+          shrink-0
+          items-center
+          justify-center
+          rounded-xl
+          p-3
+          sm:p-4
+          ${bgColor}
+        `}
+      >
         {icon}
       </div>
 
-      <div>
-        <h4 className="font-semibold">{title}</h4>
+      <div className="min-w-0">
+        <h4 className="font-semibold">
+          {title}
+        </h4>
 
-        <p className="text-zinc-500 dark:text-zinc-400">
+        <p
+          className="
+            break-words
+            text-sm
+            text-zinc-500
+            dark:text-zinc-400
+            sm:text-base
+          "
+        >
           {value}
         </p>
       </div>
