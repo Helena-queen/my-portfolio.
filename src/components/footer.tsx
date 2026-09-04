@@ -2,14 +2,14 @@
 import React from "react";
 import {
   ArrowUp,
-  Mail,
+  // Mail,
   Heart,
 } from "lucide-react";
 
-import {
-  FaGithub,
-  FaLinkedin,
-} from "react-icons/fa6";
+// import {
+//   FaGithub,
+//   FaLinkedin,
+// } from "react-icons/fa6";
 
 import { motion } from "framer-motion";
 
@@ -36,7 +36,6 @@ function Footer(): React.ReactElement {
           lg:px-8
         "
       >
-        {/* Availability Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -70,8 +69,7 @@ function Footer(): React.ReactElement {
             Available for Freelance & Full-Time Opportunities
           </span>
         </motion.div>
-
-        {/* Social Links */}
+{/* 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -98,7 +96,7 @@ function Footer(): React.ReactElement {
               text-zinc-800
               transition-all
               duration-300
-              hover:bg-orange-500
+              hover:bg-gray-500
               hover:text-white
               dark:bg-zinc-900
               dark:text-white
@@ -128,8 +126,8 @@ function Footer(): React.ReactElement {
               text-blue-500
               transition-all
               duration-300
-              hover:bg-blue-600
-              hover:text-white
+              // hover:bg-blue-500
+              // hover:text-white
               sm:h-12
               sm:w-12
             "
@@ -154,7 +152,7 @@ function Footer(): React.ReactElement {
               text-red-500
               transition-all
               duration-300
-              hover:bg-red-500
+              hover:bg-red-900
               hover:text-white
               sm:h-12
               sm:w-12
@@ -162,9 +160,9 @@ function Footer(): React.ReactElement {
           >
             <Mail size={20} />
           </motion.a>
-        </motion.div>
+        </motion.div> */}
 
-        {/* Divider */}
+      
         <motion.div
           initial={{ opacity: 0, scaleX: 0.5 }}
           whileInView={{ opacity: 1, scaleX: 1 }}

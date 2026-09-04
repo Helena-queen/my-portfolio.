@@ -25,10 +25,10 @@ const projects = [
   },
 
   {
-    title: "FitTrack - Fitness Tracking App",
+    title: "Coming Soon",
     image: "/projects/fittrack.png",
     description:
-      "A modern fitness tracking application that allows users to monitor their workouts, nutrition, and progress over time.",
+      "Kindly note that this is coming soon.",
 
     technologies: [
       "Next.js",
@@ -43,10 +43,10 @@ const projects = [
   },
 
   {
-    title: "E-commerce Platform",
+    title: "Coming Soon",
     image: "/projects/ecommerce.png",
     description:
-      "A scalable e-commerce platform that provides a seamless shopping experience, including product listings, shopping cart, payment integration, and order management.",
+      "Kindly note that this is coming soon.",
 
     technologies: [
       "React",

@@ -12,6 +12,7 @@ import {
   ArrowDown,
   Download,
   Mail,
+  Eye,
 } from "lucide-react";
 
 function Home() {
@@ -277,9 +278,69 @@ function Home() {
               sm:gap-4
             "
           >
+            {/* View Resume */}
+            <motion.a
+              href="/Helen_Opute_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={
+                shouldReduceMotion
+                  ? undefined
+                  : {
+                      scale: 1.04,
+                      y: -2,
+                    }
+              }
+              whileTap={
+                shouldReduceMotion
+                  ? undefined
+                  : {
+                      scale: 0.97,
+                    }
+              }
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 18,
+              }}
+              className="
+                flex
+                w-full
+                items-center
+                justify-center
+                rounded-xl
+                border
+                border-gray-300
+                bg-white/70
+                px-6
+                py-3
+                font-semibold
+                text-gray-900
+                transition-colors
+                duration-300
+                hover:border-orange-500
+                hover:bg-orange-50
+                sm:w-auto
+                sm:px-8
+                dark:border-zinc-700
+                dark:bg-zinc-900/60
+                dark:text-white
+                dark:hover:border-orange-500
+                dark:hover:bg-zinc-800
+              "
+            >
+              <Eye
+                size={20}
+                className="mr-3"
+              />
+
+              View Resume
+            </motion.a>
+
             {/* Download CV */}
-            <motion.button
-              type="button"
+            <motion.a
+              href="/Helen_Opute_Resume.pdf"
+              download="Helen_Opute_Resume.pdf"
               whileHover={
                 shouldReduceMotion
                   ? undefined
@@ -339,7 +400,7 @@ function Home() {
 
                 Download CV
               </span>
-            </motion.button>
+            </motion.a>
 
             {/* Contact Me */}
             <motion.a
