@@ -57,7 +57,7 @@ function ContactInfo(): React.ReactElement {
             <ContactItem
               icon={<Mail size={20} className="text-[#2469e2]" />}
               title="Email"
-              value="oputehelen@gmail.com"
+              value="oputehelen18@gmail.com"
               bgColor="bg-blue-100 dark:bg-[#1e408e]"
             />
           </motion.div>

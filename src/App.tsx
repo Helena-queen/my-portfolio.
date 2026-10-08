@@ -4,7 +4,7 @@ import Navbar from "./components/navbar";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Skills from "./pages/skills";
-import Projects from "./pages/projects";
+// import Projects from "./pages/projects";
 import Experience from "./pages/experience";
 import Contacts from "./pages/contact/contacts";
 import CertificatationTraining from "./pages/certifications-training";
@@ -67,9 +67,9 @@ function App(): React.ReactElement {
         <Experience />
       </section>
 
-      <section id="projects">
+      {/* <section id="projects">
         <Projects />
-      </section>
+      </section> */}
 
       <section id="certifications-training">
         <CertificatationTraining />
