@@ -339,7 +339,7 @@ function Home() {
 
             {/* Download CV */}
             <motion.a
-              href="/Helen_Opute_Resume.pdf"
+              href="/Helen_Opute_CV.pdf"
               download="Helen_Opute_Resume.pdf"
               whileHover={
                 shouldReduceMotion
