@@ -280,7 +280,7 @@ function Home() {
           >
             {/* View Resume */}
             <motion.a
-              href="/public/Helen_Opute_CV.pdf"
+              href="/Helen_Opute_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={
@@ -339,7 +339,7 @@ function Home() {
 
             {/* Download CV */}
             <motion.a
-              href="/public/Helen_Opute_CV.pdf"
+              href="/Helen_Opute_CV.pdf"
               download="Helen_Opute_CV.pdf"
               whileHover={
                 shouldReduceMotion
